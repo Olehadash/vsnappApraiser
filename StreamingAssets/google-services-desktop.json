@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "102849283268",
+    "project_id": "vsanp-a0b97",
+    "storage_bucket": "vsanp-a0b97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102849283268:android:3477a653aa70df62a63591",
+        "android_client_info": {
+          "package_name": "com.vsnap.Appriser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102849283268-bl9f4kio9cj6sf114u791crjv5mkk0vs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAEvB7_OR1dZKJZmgyQWiM4SPISkYoTbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102849283268-bl9f4kio9cj6sf114u791crjv5mkk0vs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "102849283268-roh4g8oeoqp722loaj335kh2hq9ipnh4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.vsnap.Appriser"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

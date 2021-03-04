@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eca7773dbc7f5b47878b382f321f62e, type: 3}
+  m_Name: GoogleDriveSettings
+  m_EditorClassIdentifier: 
+  genericClientCredentials:
+    client_id: 353952805333-oi2fln2cjblohbv2182qu3a0lr5lbhrt.apps.googleusercontent.com
+    project_id: vsnapp
+    auth_uri: https://accounts.google.com/o/oauth2/auth
+    token_uri: https://oauth2.googleapis.com/token
+    auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
+    client_secret: 
+    redirect_uris:
+    - urn:ietf:wg:oauth:2.0:oob
+    - http://localhost
+  uriSchemeClientCredentials:
+    clientId: 353952805333-oi2fln2cjblohbv2182qu3a0lr5lbhrt.apps.googleusercontent.com
+    reversedClientId: com.googleusercontent.apps.353952805333-oi2fln2cjblohbv2182qu3a0lr5lbhrt
+    plistVersion: 1
+    bundleId: com.vsnapp.appriser
+  accessScopes:
+  - https://www.googleapis.com/auth/drive.appdata
+  - https://www.googleapis.com/auth/drive.file
+  loopbackUri: http://localhost
+  loopbackResponseHtml: <h1>Google Drive Comand Succseed</h1>
+  accessTokenPrefsKey: AIzaSyAx9Vgqe__s6QfeWe8OO2cNLWB_c7IeZrk
+  refreshTokenPrefsKey: AIzaSyAx9Vgqe__s6QfeWe8OO2cNLWB_c7IeZrk

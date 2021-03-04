@@ -1,0 +1,80 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AndroidCamera
+{
+
+	AndroidJavaObject camera = null;
+
+	public AndroidCamera()
+	{
+		//WebCamDevice[] devices = WebCamTexture.devices;
+		Debug.Log("camera_: SetCamera");
+		open();
+	}
+
+	public void open()
+	{
+		if (camera == null)
+		{
+#if (UNITY_ANDROID && !UNITY_EDITOR)
+			AndroidJavaClass cameraClass = new AndroidJavaClass("android.hardware.Camera");
+			camera = cameraClass.CallStatic<AndroidJavaObject>("open");
+#endif
+		}
+	}
+
+	public void release()
+	{
+		if (camera != null)
+		{
+			LEDOff();
+
+			camera.Call("release");
+			camera = null;
+		}
+	}
+
+	public void startPreview()
+	{
+		if (camera != null)
+		{
+			Debug.Log("camera_: AndroidCamera::startPreview()");
+			camera.Call("startPreview");
+		}
+	}
+
+	public void stopPreview()
+	{
+		if (camera != null)
+		{
+			Debug.Log("camera_: AndroidCamera::stopPreview()");
+			LEDOff();
+			camera.Call("stopPreview");
+		}
+	}
+
+	// Flashモードの設定	
+	private void setFlashMode(string mode)
+	{
+		if (camera != null)
+		{
+			AndroidJavaObject cameraParameters = camera.Call<AndroidJavaObject>("getParameters");
+			cameraParameters.Call("setFlashMode", mode);
+			camera.Call("setParameters", cameraParameters);
+		}
+	}
+
+	// LED点灯
+	public void LEDOn()
+	{
+		setFlashMode("torch");
+	}
+
+	// LED消灯
+	public void LEDOff()
+	{
+		setFlashMode("off");
+	}
+}
